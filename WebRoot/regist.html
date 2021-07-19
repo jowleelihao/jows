@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <link rel="stylesheet" type="text/css" href="css/useful.css">
+    <script type="text/javascript"src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+
+</head>
+<body>
+<!--Stage 1
+         一个用户注册页面
+         1.页面包括用户名、密码、确认密码、电话号码、国籍、生日、喜好、性别
+         2.在用户输完一项后有以下要求：
+              用户名可以包含数字、下划线、数字和汉字，长度为6-18，并且提示用户
+             密码只能包含字母、数字和下划线，长度为8-16位并且提示用户
+              确认密码若不一致则提示用户
+              电话号码为11位并且提示用户
+              国籍为选择型不为输入型、生日为选择型；
+              喜好为选择型、可多选,设置全选与反选功能
+          3.加入注册按钮。若成功，则转到成功界面。若上述有不符合要求的任何一项、将不实现跳转；
+-->
+<form action="http://localhost:8080/jows/regist" method="post">
+    <h1 class="title">注册系统</h1><br>
+    <div align="center">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" id="userName" name="username"/>
+                    <span id="useNameSpan" >用户名需由6-18位数字、字母或下划线组成</span>
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" id="password1" name="password">
+                    <span id="password1Span" >密码只能包含字母、数字和下划线，长度为8-16位</span>
+                </td>
+            </tr>
+            <tr>
+                <td>请确认密码：</td>
+                <td><input type="password" id="password2">
+                    <span id="password2Span" ></span>
+                </td>
+            </tr>
+            <tr>
+                <td>电话：</td>
+                <td><input type="text" id="phone" name="phone">
+                    <span id="phoneSpan"></span>
+                </td>
+            </tr>
+              <tr>
+                <td>邮箱：</td>
+                <td><input type="text" id="email" name="email">
+                    <span id="emailSpan"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>生日：</td>
+                <td>
+                    <select id="yearList" name="year">
+                        <option>---请选择年份---</option>
+
+                    </select>年
+                    <select id="monthList" name="month">
+                        <option>---请选择月份---</option>
+
+                    </select>月
+                    <select id="dayList" name="day">
+                    <option>---请选择日期---</option>
+                    </select>日
+                    <span id="birthSpan"></span>
+                </td>
+            </tr>
+           
+                <td>性别:</td>
+                <td><input type="radio" name="sex" value="男">男<input type="radio" name="sex" value="女">女<span id="sexSpan"></span></td>
+           
+           
+
+            <tr>
+                
+                <td><input type="submit" id="turnin" value="注册"></td>
+                <td><a href="login.html" style="text-decoration: none;">登录</a></td>
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>
